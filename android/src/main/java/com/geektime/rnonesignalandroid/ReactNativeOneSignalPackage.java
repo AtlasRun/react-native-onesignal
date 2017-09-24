@@ -17,7 +17,6 @@ public class ReactNativeOneSignalPackage implements ReactPackage {
 
     RNOneSignal mRNPushNotification;
 
-    @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
         mRNPushNotification = new RNOneSignal(reactContext);
@@ -26,12 +25,10 @@ public class ReactNativeOneSignalPackage implements ReactPackage {
         return modules;
     }
 
-    @Override
     public List<Class<? extends JavaScriptModule>> createJSModules() {
         return Collections.emptyList();
     }
 
-    @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
         return new ArrayList<>();
     }
